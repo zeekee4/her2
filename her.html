@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prom Invitation</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .invitation {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .image-container {
+            flex: 1;
+            margin: 0 10px;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .content {
+            flex: 2;
+        }
+        h1 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff69b4; /* Pink */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Added transform */
+            margin: 0 10px;
+            box-shadow: 0 4px #d3478e; /* Light shadow */
+        }
+        button:hover {
+            background-color: #ff1493; /* Darker Pink on Hover */
+            box-shadow: 0 2px #d3478e; /* Slightly darker shadow on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="invitation">
+    <div class="image-container">
+        <img src="heart.gif" alt="Left Image">
+    </div>
+    <div class="content">
+        <h1>Will you come to prom with me?</h1>
+        <a href="yes.html"> <button onclick id="yesButton">Yes</button> </a>
+        <button onclick="increaseYesSize()">No</button> <!-- Added onclick function for No button -->
+    </div>
+    <div class="image-container">
+        <img src="heart.gif" alt="Right Image">
+    </div>
+</div>
+
+<script>
+    function increaseYesSize() {
+        var yesButton = document.getElementById("yesButton");
+        var currentSize = window.getComputedStyle(yesButton).fontSize;
+        var newSize = parseInt(currentSize) + 2;
+        yesButton.style.fontSize = newSize + "px";
+    }
+</script>
+
+</body>
+</html>
